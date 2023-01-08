@@ -5,6 +5,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.addColumn("Elections", "adminID", {
       type: Sequelize.DataTypes.INTEGER,
+      
     });
     await queryInterface.addConstraint("Elections", {
       fields: ["adminID"],
